@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:ex="http://example.org/ontology#">
+
+    <owl:Ontology rdf:about="http://example.org/ontology"/>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="http://example.org/ontology#Addition"/>
+    <owl:Class rdf:about="http://example.org/ontology#Subtraction"/>
+    <owl:Class rdf:about="http://example.org/ontology#Multiplication"/>
+    <owl:Class rdf:about="http://example.org/ontology#Division"/>
+
+    <!-- Datatype Properties -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology#hasOperand1">
+        <rdfs:domain rdf:resource="http://example.org/ontology#Addition"/>
+        <rdfs:domain rdf:resource="http://example.org/ontology#Subtraction"/>
+        <rdfs:domain rdf:resource="http://example.org/ontology#Multiplication"/>
+        <rdfs:domain rdf:resource="http://example.org/ontology#Division"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology#hasOperand2">
+        <rdfs:domain rdf:resource="http://example.org/ontology#Addition"/>
+        <rdfs:domain rdf:resource="http://example.org/ontology#Subtraction"/>
+        <rdfs:domain rdf:resource="http://example.org/ontology#Multiplication"/>
+        <rdfs:domain rdf:resource="http://example.org/ontology#Division"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology#hasResult">
+        <rdfs:domain rdf:resource="http://example.org/ontology#Addition"/>
+        <rdfs:domain rdf:resource="http://example.org/ontology#Subtraction"/>
+        <rdfs:domain rdf:resource="http://example.org/ontology#Multiplication"/>
+        <rdfs:domain rdf:resource="http://example.org/ontology#Division"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+
+    <!-- Rules -->
+    <rdf:Description rdf:about="http://example.org/ontology#AdditionRule">
+        <rdfs:comment>Result = Operand1 + Operand2</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/ontology#SubtractionRule">
+        <rdfs:comment>Result = Operand1 - Operand2</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/ontology#MultiplicationRule">
+        <rdfs:comment>Result = Operand1 * Operand2</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/ontology#DivisionRule">
+        <rdfs:comment>Result = Operand1 / Operand2</rdfs:comment>
+    </rdf:Description>
+
+</rdf:RDF>
